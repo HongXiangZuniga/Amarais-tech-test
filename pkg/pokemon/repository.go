@@ -1,5 +1,7 @@
 package pokemon
 
 type PokemonRepo interface {
-	SavePokemon() error
+	SavePokemon(Pokemon) error
+	IsExist(id int) (*bool, error)
+	GetPokemon(id int) (*Pokemon, error)
 }

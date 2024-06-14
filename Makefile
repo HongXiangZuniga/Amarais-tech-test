@@ -1,3 +1,5 @@
 run:
+	docker-compose up -d 
+run-local:
 	go mod download
-	go run cmd/server/api.go
+	go run main.go
