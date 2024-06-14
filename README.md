@@ -51,3 +51,12 @@ GET    /pokemon/:id
 POST   /pokemon/    
 ```
 Disponible postman Collection para test.
+
+#### Env de ejemplo
+```
+POKE_API_URL=https://pokeapi.co/api/
+API_TOKEN="1234"
+MONGO_URI=mongodb://mongo:27017
+MONGO_DBNAME=pokemon
+MONGO_COLLECTION=pokemon
+```
