@@ -2,13 +2,25 @@
 
 
 #### Uso
-Para Ejecutar
+
+- crear .env
+- Ejecutar con:
 
 ```
 Make run
 or
 docker-compose up -d
 ```
+
+#### Env de ejemplo
+```
+POKE_API_URL=https://pokeapi.co/api/
+API_TOKEN="1234"
+MONGO_URI=mongodb://mongo:27017
+MONGO_DBNAME=users
+MONGO_COLLECTION=users
+```
+# Env
 
 #### Diagramas
 ![Link to Amarais-tech-test](/desing.png)
