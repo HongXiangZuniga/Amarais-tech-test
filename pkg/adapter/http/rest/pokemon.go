@@ -38,6 +38,18 @@ func (port *port) PostPokemon(ctx *gin.Context) {
 		ctx.JSON(400, gin.H{"error": "Id is required"})
 		return
 	}
+	if pokemon.Height == 0 {
+		ctx.JSON(400, gin.H{"error": "Height is required"})
+		return
+	}
+	if pokemon.Weight == 0 {
+		ctx.JSON(400, gin.H{"error": "Weight is required"})
+		return
+	}
+	if pokemon.Order == 0 {
+		ctx.JSON(400, gin.H{"error": "Order is required"})
+		return
+	}
 	if pokemon.Name == "" {
 		if pokemon.Pokemon == "" {
 			ctx.JSON(400, gin.H{"error": "Name or Pokemon is required"})
