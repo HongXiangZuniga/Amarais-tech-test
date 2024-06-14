@@ -20,7 +20,6 @@ MONGO_URI=mongodb://mongo:27017
 MONGO_DBNAME=users
 MONGO_COLLECTION=users
 ```
-# Env
 
 #### Diagramas
 ![Link to Amarais-tech-test](/desing.png)
