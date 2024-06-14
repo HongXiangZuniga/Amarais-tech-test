@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "7d0771c9-74dd-4bad-bb6d-ab20323cbed7",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5830269"
+	},
+	"item": [
+		{
+			"name": "GetPokemon",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url_base}}/pokemon/{{id}}",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"pokemon",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPokemon/name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Prueba\",\n    \"order\": 403,\n    \"height\": 6,\n    \"weight\": 110,\n    \"abilities\": [\n        {\n            \"ability\": {\n                \"name\": \"cute-charm\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/56/\"\n            },\n            \"is_hidden\": false,\n            \"slot\": 1\n        },\n        {\n            \"ability\": {\n                \"name\": \"normalize\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/96/\"\n            },\n            \"is_hidden\": false,\n            \"slot\": 2\n        },\n        {\n            \"ability\": {\n                \"name\": \"wonder-skin\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/147/\"\n            },\n            \"is_hidden\": true,\n            \"slot\": 3\n        }\n    ],\n    \"id\": 1500\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base}}/pokemon/",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"pokemon",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPokemon/pokemon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pokemon\":\"Prueba\",\n    \"order\": 403,\n    \"height\": 6,\n    \"weight\": 110,\n    \"abilities\": [\n        {\n            \"ability\": {\n                \"name\": \"cute-charm\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/56/\"\n            },\n            \"is_hidden\": false,\n            \"slot\": 1\n        },\n        {\n            \"ability\": {\n                \"name\": \"normalize\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/96/\"\n            },\n            \"is_hidden\": false,\n            \"slot\": 2\n        },\n        {\n            \"ability\": {\n                \"name\": \"wonder-skin\",\n                \"url\": \"https://pokeapi.co/api/v2/ability/147/\"\n            },\n            \"is_hidden\": true,\n            \"slot\": 3\n        }\n    ],\n    \"id\": 1501\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base}}/pokemon",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_base",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "1234",
+			"type": "string"
+		}
+	]
+}
