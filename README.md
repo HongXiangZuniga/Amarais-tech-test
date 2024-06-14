@@ -3,7 +3,7 @@
 
 #### Uso
 
-- crear .env
+- Crear .env
 - Ejecutar con:
 
 ```
